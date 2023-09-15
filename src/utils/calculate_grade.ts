@@ -6,7 +6,7 @@
  *
  * Anything that has a type of "undefined" you will need to replace with something.
  */
-import { Assignment, IUniversityClass, GradeObject } from "../types/api_types";
+import { IUniversityClass } from "../types/api_types";
 import axios from 'axios';
 
 /**

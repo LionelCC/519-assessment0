@@ -1,4 +1,4 @@
-import { IUniversityClass , GradeObject} from "../types/api_types";
+import { IUniversityClass } from "../types/api_types";
 import { DataGrid, GridColDef, GridRowsProp} from "@mui/x-data-grid";
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
@@ -20,13 +20,6 @@ import { calcAllFinalGrade } from "../utils/calculate_grade";
  */
 interface GradeTableProps {
   selectedClassId: string;
-}
-
-interface Student {
-  universityId: string
-  name: string
-  dateEnrolled: string
-  status: string
 }
 const headers = {
   'x-functions-key': '6se7z2q8WGtkxBlXp_YpU-oPq53Av-y_GSYiKyS_COn6AzFuTjj4BQ=='
