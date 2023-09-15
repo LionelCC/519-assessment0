@@ -4,17 +4,16 @@ import { Select, Typography, MenuItem } from "@mui/material";
 /**
  * You will find globals from this file useful!
  */
-import { GET_DEFAULT_HEADERS } from "./globals";
+//import { GET_DEFAULT_HEADERS } from "./globals";
 import { IUniversityClass } from "./types/api_types";
 import { GradeTable } from "./components/GradeTable";
 import axios from 'axios';
-import { config } from "process";
 
 function App() {
   // You will need to use more of these!
   const [currClassId, setCurrClassId] = useState<string>("");
   const [classList, setClassList] = useState<IUniversityClass[]>([]);
-  const [students, setStudents] = useState<any[]>([]);
+  const [, setStudents] = useState<any[]>([]);
 
   /**
    * This is JUST an example of how you might fetch some data(with a different API).
@@ -32,10 +31,8 @@ function App() {
    */
   const fetchSomeData = async () => {
     try {
-      const config = {
-        headers: GET_DEFAULT_HEADERS()
-      };
       
+
       const response = await axios.get('https://spark-se-assessment-api.azurewebsites.net/api/class/listBySemester/fall2022?buid=U07405824', 
       {
         headers: {
